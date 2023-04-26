@@ -3,8 +3,17 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Filmes from './screens/Filmes';
 
 function Home() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Filmes />
+    </View>
+  );
+}
+
+function favorite() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text></Text>
@@ -14,7 +23,7 @@ function Home() {
 
 function Profile() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View styel={{flex:1, justifyContent:'center',alignItems:'center'}}>
       <Text></Text>
     </View>
   );
@@ -31,12 +40,22 @@ function MyTabs() {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="DevCar"
         component={Home}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="favorite"
+        component={favorite}
+        options={{
+          tabBarLabel: 'favorite',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="star" color={color} size={size} />
           ),
         }}
       />
