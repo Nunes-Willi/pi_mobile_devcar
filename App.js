@@ -4,6 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+import CardOfertas from './screens/CardOfertas';
+
 function Home() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -55,6 +57,32 @@ function MyTabs() {
 }
 
 export default function App() {
+  const [ofertas, setOferta] = React.useState([
+    {
+      id: 1,
+      carro: "mini cooper",
+      modelo: "Gol",
+      ano: "2006",
+      preco: "300000",
+    },
+
+    {
+      id: 2,
+      carro: "Impala",
+      modelo: "Gol",
+      ano: "1996",
+      preco: "91000000",
+    },
+
+    {
+      id: 3,
+      carro: "Camionet",
+      modelo: "fiat",
+      ano: "2016",
+      preco: "40600",
+    },
+  ])
+
   return (
     <NavigationContainer>
       <MyTabs />
