@@ -1,27 +1,51 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Card } from 'react-native-paper';
-import { DefaultTheme } from 'react-native-paper';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import Swiper from 'react-native-swiper';
 
-export default function Filmes () {
+const Carousel = () => {
   return (
-    <View style={styles.container}>
-      <Card style={styles.card}>
-        <Card.Title title="Esta é a tela de Filmes" />
-      </Card>
-    </View>
+    <Swiper style={styles.wrapper} autoplay>
+      <View style={styles.slide}>
+        <Image
+          source={require}
+          style={styles.image}
+        />
+        <Text style={styles.text}>Slide 1</Text>
+      </View>
+      <View style={styles.slide}>
+        <Image
+          source={require}
+          style={styles.image}
+        />
+        <Text style={styles.text}>Slide 2</Text>
+      </View>
+      <View style={styles.slide}>
+        <Image
+          source={require}
+          style={styles.image}
+        />
+        <Text style={styles.text}>Slide 3</Text>
+      </View>
+    </Swiper>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
+  wrapper: {},
+  slide: {
     flex: 1,
-    flexDirection: 'column',
-    backgroundColor: DefaultTheme.colors.background,
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 10
   },
-  card: {
-    width: '90%'
-  }
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+  },
+  text: {
+    fontSize: 20,
+    color: '#fff',
+  },
 });
+
+export default Carousel;
