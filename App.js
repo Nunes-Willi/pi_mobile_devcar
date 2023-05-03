@@ -1,17 +1,18 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Filmes from './screens/Filmes';
 
-// import CardOfertas from './screens/CardOfertas';
+import CardOfertas from './screens/CardOfertas';
 
 function Home() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <ScrollView style={{ flex: 1}}>
       <Filmes />
-    </View>
+      <CardOfertas/>
+    </ScrollView>
   );
 }
 

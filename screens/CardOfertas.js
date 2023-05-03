@@ -30,16 +30,17 @@ export default function CardOfertas(props) {
 }
 
 
-// const styles = StyleSheet.create({
-//   card: {
-//     backgroundColor: "red",
-//     width: "45%",
-//     height: 250,
-//     borderRadius: 10,
-//     margin: 15,
-//     justifyContent: "center",
-//     alignItems: "center",
-//   },
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: "red",
+    width: "45%",
+    height: 250,
+    borderRadius: 10,
+    margin: 15,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+})
 
 //   car: {
 //     resizeMode: "stretch",

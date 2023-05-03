@@ -29,7 +29,7 @@ const Carousel = () => {
     {
       id: 2,
       carro: "Impala",
-      img: "https://quatrorodas.abril.com.br/wp-content/uploads/2021/04/Novo-Mini-Cooper-S-2021-2.jpg?quality=70&strip=info",
+      img: "https://static.wikia.nocookie.net/supernaturalbrasil/images/9/95/Tumblr_m0yd0fkkxv1rqeevno7_r1_500.png/revision/latest?cb=20130104232809&path-prefix=pt-br",
       modelo: "Gol",
       ano: "1996",
       preco: "91000000",
@@ -37,8 +37,8 @@ const Carousel = () => {
 
     {
       id: 3,
-      carro: "Camionet",
-      img: "https://quatrorodas.abril.com.br/wp-content/uploads/2021/04/Novo-Mini-Cooper-S-2021-2.jpg?quality=70&strip=info",
+      carro: "Camionete",
+      img: "https://jornaldobairroalto.com.br/wp-content/uploads/2022/06/camionete-caminhonete-qual-certo.jpg",
       modelo: "fiat",
       ano: "2016",
       preco: "40600",
