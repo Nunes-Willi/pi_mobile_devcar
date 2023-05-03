@@ -15,7 +15,7 @@ function Home() {
   );
 }
 
-function favorite() {
+function Search() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text></Text>
@@ -52,12 +52,12 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="favorite"
-        component={favorite}
+        name="search"
+        component={Search}
         options={{
-          tabBarLabel: 'favorite',
+          tabBarLabel: 'pesquisar',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="star" color={color} size={size} />
+            <MaterialCommunityIcons name="magnify" color={color} size={size} />
           ),
         }}
       />
