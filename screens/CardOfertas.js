@@ -3,23 +3,24 @@ import { StyleSheet, Text, Image, View, TouchableOpacity } from "react-native";
 export default function CardOfertas(props) {
   return (
     <View style={styles.card}>
-    
-      {/* <Image source= {{uri:props.catof.carimg}}/> */}
-      <Image />
-      
-      <Text>Marca do Carro</Text>
-      <Text>Modelo e ano</Text>
-      <Text>Preço</Text>
+      <Image
+        style={styles.carro}
+        source={{ uri: props.ofer.carimg }}
+        resizeMode="cover"
+      />
 
-      <TouchableOpacity>
-        <Text style={{fontSize: 10, color: "yellow", fontWeight: "bold"}}>
+      <Text>{props.ofer.carro}</Text>
+      <Text>{`${props.ofer.modelo} - ${props.ofer.ano}`}</Text>
+      <Text>{`R$ ${props.ofer.preco}`}</Text>
+
+      <TouchableOpacity onPress={props.favoritarCar}>
+        <Text style={{ fontSize: 10, color: "yellow", fontWeight: "bold" }}>
           Favoritar
         </Text>
       </TouchableOpacity>
     </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   card: {
@@ -31,4 +32,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-})
+
+  carro: {
+    resizeMode: "stretch",
+    width: "100%",
+    height: 180,
+  },
+});
