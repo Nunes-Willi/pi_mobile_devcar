@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Filmes from "./screens/Filmes";
 import CardOfertas from "./screens/CardOfertas";
+import Serie from "./screens/Series"
 
 // function Home() {
 //   return (
