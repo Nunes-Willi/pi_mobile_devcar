@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Filmes from "./screens/Filmes";
 import CardOfertas from "./screens/CardOfertas";
-import Serie from "./screens/Series"
+import Series from "./screens/Series";
 
 // function Home() {
 //   return (
@@ -142,7 +142,7 @@ export default function App() {
       ano: "2006",
       preco: "300000",
     },
-  
+
     {
       id: 2,
       carimg:
@@ -152,7 +152,7 @@ export default function App() {
       ano: "2010",
       preco: "25000",
     },
-  
+
     {
       id: 3,
       carimg:
@@ -187,7 +187,11 @@ export default function App() {
         <Filmes />
         <View style={styles.cardOrf}>
           {ofers.map((ofer) => (
-            <CardOfertas ofer={ofer} key={ofer.id} favoritarCar={() => favoritarCar(ofer.id)}/>
+            <CardOfertas
+              ofer={ofer}
+              key={ofer.id}
+              favoritarCar={() => favoritarCar(ofer.id)}
+            />
           ))}
         </View>
       </ScrollView>
@@ -204,9 +208,14 @@ export default function App() {
 
   function Profile() {
     return (
-      <View styel={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text></Text>
-      </View>
+      <ScrollView>
+        <View
+          styel={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+        >
+          <Series />
+          <Text></Text>
+        </View>
+      </ScrollView>
     );
   }
 
@@ -259,8 +268,8 @@ export default function App() {
           }}
         />
       </Tab.Navigator>
-    )
-  };
+    );
+  }
 
   return (
     <NavigationContainer>
