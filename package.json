@@ -25,6 +25,7 @@
     "react-native-snap-carousel": "^3.9.1",
     "react-native-swiper": "^1.6.0",
     "react-native-web": "~0.18.10",
+    "swipe": "^1.7.7",
     "swiper": "^9.2.4"
   },
   "devDependencies": {
