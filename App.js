@@ -3,9 +3,10 @@ import { Text, View, ScrollView, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Filmes from "./screens/Filmes";
+import Homes from "./screens/Homes";
 import CardOfertas from "./screens/CardOfertas";
-import Series from "./screens/Series";
+import Login from "./screens/Login";
+import Busca from "./screens/Busca"
 
 // function Home() {
 //   return (
@@ -184,7 +185,7 @@ export default function App() {
   function Home() {
     return (
       <ScrollView style={{ flex: 1 }}>
-        <Filmes />
+        <Homes />
         <View style={styles.cardOrf}>
           {ofers.map((ofer) => (
             <CardOfertas
@@ -200,9 +201,14 @@ export default function App() {
 
   function Search() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text></Text>
-      </View>
+      <ScrollView>
+        <View
+          styel={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+        >
+          <Busca />
+          <Text></Text>
+        </View>
+      </ScrollView>
     );
   }
 
@@ -212,7 +218,7 @@ export default function App() {
         <View
           styel={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <Series />
+          <Login />
           <Text></Text>
         </View>
       </ScrollView>
