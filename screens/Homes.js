@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
-import Swiper from 'react-native-swiper';
+import Swiper from 'react-native-swiper/src/index';
 
 const ItemCarousel = (props) => {
   return (
